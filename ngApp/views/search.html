@@ -1,0 +1,17 @@
+<h3 id="searchStr">Available cars:</h3>
+
+
+    <p id="SrchView">Enter car make:<input
+    ng-model="controller.search"
+    type="search"
+    ng-model-options="{debounce:1000}"
+    ng-change="controller.fetch()"/></p>
+    <p id="subSearch"<span><input type="submit" id="subSearch" value="Submit"></span></p>
+    <p id="or"><strong>or</strong></p>
+    <h3 id="dropdown">Select a car: <select class="" name="make"></select></h3>
+
+    <ul>
+       <li ng-repeat="makes in controller.makes">
+           {{makes.name}}
+       </li>
+    </ul>

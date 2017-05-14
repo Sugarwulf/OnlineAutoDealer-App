@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="car_dealership">
+
+<head>
+  <title>car-dealership</title>
+  <meta charset="utf-8">
+  <base href="/" />
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/ngApp/css/site.css"/>
+</head>
+
+<body ngController="SearchController as controller">
+  <div class="container" id="headDiv">
+        <div class="row">
+        <h1 class="center"><span>Car Swap | </span><img id="logo"  src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRHL7gnByOshPr3Hl5PPSROFVRH0fpgo75uEUEcE191maT30t91" alt="logo"></h1>
+       </div>
+ </div>
+
+      <div id="searchDiv" class="container">
+
+      </div>
+
+
+        <div class="">
+          <img id="roadway" class="img-responsive" src="https://img.clipartfest.com/1b5b1228db60f70df16b0118b7af3dfd_road-clipart-wallpaper-roadway-image-clipart-1024_2560-1690.jpeg" alt="roadway">
+        </div>
+
+        <div id ="footDiv" class="container" class="row">
+          <div><p>"Life is short, but the road is long.  Drive happy." - unknown author</p></div>
+           <span id="buy" class ="float left"><a href="/buy">Buy  |</a> </span>
+           <span id="sell"  class="center"><a href="/sell">Sell</a></span>
+          <span id="trade" class="float right"><a href="/trade">|  Trade</a></span>
+      <!--    <span id="trade" class="float right"><a href="/">|  Custom Search</a></span>  -->
+        </div>
+
+      <div id="lastDiv" class="container">
+
+     <div id="custom" class="container"><a href="/">Custom Search</a></div>
+
+        <ui-view></ui-view>
+        <hr>
+  
+
+
+      </div>
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+  <script src="/ngApp/app.js"></script>
+  <script src="/ngApp/controllers/controllers.js"></script>
+  <script src="/ngApp/services/services.js"></script>
+</body>
+
+</html>

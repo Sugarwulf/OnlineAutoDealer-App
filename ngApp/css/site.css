@@ -1,0 +1,104 @@
+#logo{
+  width: 40px;
+  margin-bottom: 2.5px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+#headDiv {
+  background-color: #8293af
+}
+
+#searchDiv {
+  background-color: #ccced1
+}
+
+#roadway {
+  width: 1171px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#searchStr {
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+  font-size: 20px;
+}
+
+#dropdown {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+#or {
+  text-align: center;
+  color: white;
+}
+
+#footDiv {
+  text-align: center;
+  background-color: #ccced1
+}
+
+#buy {
+  color: white;
+  text-align: center;
+}
+
+#buyMessage {
+ color:white;
+  text-align: center;
+}
+
+#sell {
+  color:white;
+  text-align: center;
+}
+
+#sellMessage {
+  color: white;
+  text-align: center;
+}
+
+#trade {
+  color:white;
+  text-align: center;
+}
+
+#tradeMessage {
+  color: white;
+  text-align: center;
+}
+
+#form {
+text-align: center;
+}
+
+#subBtn {
+margin-top: 2px;
+margin-bottom: 2px;
+}
+
+#lastDiv {
+background-color: #8293af
+}
+
+#subSearch {
+  text-align: center;
+}
+
+#SrchView {
+  text-align: center;
+}
+
+#custom {
+text-align: center;
+color: white;
+margin-top: 12px;
+background color: #ccced1
+}
