@@ -64,6 +64,17 @@ router.get('/cars/:id', function (req, res, next) {
     }
 });
 
+router.get('/cars/:CarMakeId', function (req, res, next) {
+    let id = parseInt(req.params['CarMakeId']);
+    let car = findCar(id);
+    if (car) {
+        res.json(car);
+    } else {
+        res.sendStatus(404);
+    }
+});
+
+
 function findCar(id:number) {
   let matches = cars.filter((car) => {
     return car.id == id;

@@ -12,4 +12,17 @@ router.get('/makes', function(req, res, next) {
   res.json(makes);
 });
 
+router.get('/makes/search/:search', function(req, res, next) {
+    let search = req.params['search'];
+    let matches = makes.filter((makes)=>{
+      return makes.name.indexOf(search) == 0;
+
+      // return makes.name.indexOf(search) == 0;
+    }
+
+  
+);
+    res.json(matches);
+});
+
 export = router;

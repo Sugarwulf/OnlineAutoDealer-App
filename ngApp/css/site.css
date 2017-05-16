@@ -17,7 +17,7 @@ h1 {
 }
 
 #roadway {
-  width: 1171px;
+  width: 1170px;
   height: 400px;
   margin: 0 auto;
 }
@@ -25,13 +25,13 @@ h1 {
 #searchStr {
   text-align: center;
   margin-top: 5px;
-  color: white;
+  color: #D1D3D6;
   font-size: 20px;
 }
 
 #dropdown {
   text-align: center;
-  color: white;
+  color: #D1D3D6;
   font-size: 20px;
 }
 
@@ -101,4 +101,8 @@ text-align: center;
 color: white;
 margin-top: 12px;
 background color: #ccced1
+}
+
+.dropdown {
+  background-color: #E2E5E9;
 }
