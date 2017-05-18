@@ -32,7 +32,6 @@ h1 {
 #dropdown {
   text-align: center;
   color: #D1D3D6;
-  font-size: 20px;
 }
 
 #or {
@@ -94,6 +93,7 @@ background-color: #8293af
 
 #SrchView {
   text-align: center;
+  color: #D1D3D6;
 }
 
 #custom {
@@ -103,6 +103,11 @@ margin-top: 12px;
 background color: #ccced1
 }
 
-.dropdown {
-  background-color: #E2E5E9;
+#makesList {
+color: #D1D3D6;
+}
+
+#listMakes {
+list-style: none;
+text-align: center;
 }

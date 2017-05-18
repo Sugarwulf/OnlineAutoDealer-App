@@ -16,11 +16,11 @@ router.get('/makes/search/:search', function(req, res, next) {
     let search = req.params['search'];
     let matches = makes.filter((makes)=>{
       return makes.name.indexOf(search) == 0;
-
+   //I filtered the results on the server side code versus on the client side. 
       // return makes.name.indexOf(search) == 0;
     }
 
-  
+
 );
     res.json(matches);
 });

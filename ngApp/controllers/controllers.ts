@@ -4,6 +4,7 @@ namespace car_dealership.Controllers {
 
       public makes;
       public search;
+      public cars;
 
       constructor(private $http: ng.IHttpService) {
       }
@@ -12,7 +13,7 @@ namespace car_dealership.Controllers {
           // returns everything: this.$http.get('api/makes', this.search)
           this.$http.get('/api/makes/search/' + this.search)
           .then((response) => {
-          this.makes = response.data;
+          this.makes = response.data;  //See lines: 15-18 in makes.ts.  I filtered the results on the server side code versus on the client side.
 
         }).catch((response) => {
           console.log('Could not retrieve cars.');
@@ -21,35 +22,24 @@ namespace car_dealership.Controllers {
       //method to accept all makes in dropdown
     }
 
-
-
-  }
-
-
-angular.module('car_dealership').controller('SearchController', SearchController);
-
-  export class DropdownController {
-
-
-      public search;
-      public makes;
-
-
-      constructor(private $http: ng.IHttpService) {
-      }
-      fetchMakes() {
-      if(this.search) {
-        this.$http.get('/api/makes')
-          .then((response) => {
-          this.makes = response.data;
-        }).catch((response) => {
-          console.log('Could not retrieve cars.');
-        });
-      }
+    findCar() {
+    if(this.search) {
+      this.$http.get('/api/cars/search/' + this.search)
+        .then((response) => {
+        this.cars = response.data;
+      }).catch((response) => {
+        console.log('Could not retrieve cars.');
+      });
     }
   }
 
-angular.module('car_dealership').controller('DropdownController', DropdownController);
+
+
+  }
+
+angular.module('car_dealership').controller('SearchController', SearchController);
+
+
 
   export class ModalController {
 

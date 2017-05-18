@@ -8,19 +8,27 @@
     ng-model-options="{debounce: 1000}"
     ng-change="controller.fetch()"/></p>
 
-    <ul>
+<div id="makesList">
+    <ul id="listMakes">
        <li ng-repeat="makes in controller.makes track by $index">
             {{makes.name}}
       </li>
     </ul>
+</div>
+
+    <!-- <p id="or"><strong>or</strong></p> -->
+    <p id="subSearch"><span><input type="submit" class="btn" id="subSearch" onclick="" value="View Details"></span></p>
 
     <p id="or"><strong>or</strong></p>
 
-    <div ngController ="DropdownController as controller">
-    <h3 id="dropdown">Select a car: <select ng-model="controller.fetchMakes"
-
-
-                                            ng-options="makes in controller.makes track by i"></select></h3>
+    <div ngController ="SearchController as controller">
+    <p id="dropdown">Select a car:
+      <select class="form control" ng-model="controller.search" ng-change="controller.findCar()">
+<!-- <option selected value="S">Select car</option> -->
+     <option value="B">BMW</option>
+     <option value="T">Tesla</option>
+     <option value="M">Mini</option>
+   </select></p>
 
     <p id="subSearch"><span><input type="submit" id="subSearch" value="View Details"></span></p>
   </div>
