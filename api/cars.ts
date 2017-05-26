@@ -54,17 +54,18 @@ router.get('/cars', function (req, res, next) {
     res.json(cars);
 });
 
-router.get('/cars/:id', function (req, res, next) {
-    let id = parseInt(req.params['id']);
-    let car = findCar(id);
-    if (car) {
-        res.json(car);
-    } else {
-        res.sendStatus(404);
-    }
-});
+// router.get('/cars/:id', function (req, res, next) {
+//     let id = parseInt(req.params['id']);
+//     let car = findCar(id);
+//     if (car) {
+//         res.json(car);
+//     } else {
+//         res.sendStatus(404);
+//     }
+// });
 
 router.get('/cars/:CarMakeId', function (req, res, next) {
+
     let id = parseInt(req.params['CarMakeId']);
     let car = findCar(id);
     if (car) {

@@ -31,12 +31,12 @@ h1 {
 
 #dropdown {
   text-align: center;
-  color: #D1D3D6;
+  color: #6A6C6E
 }
 
 #or {
   text-align: center;
-  color: white;
+    color: #6A6C6E
 }
 
 #footDiv {
@@ -93,7 +93,7 @@ background-color: #8293af
 
 #SrchView {
   text-align: center;
-  color: #D1D3D6;
+  color: #6A6C6E
 }
 
 #custom {
@@ -104,10 +104,26 @@ background color: #ccced1
 }
 
 #makesList {
-color: #D1D3D6;
+color: #6A6C6E
 }
 
 #listMakes {
 list-style: none;
 text-align: center;
+}
+
+#tableChild {
+  margin:0 auto;
+  text-align: center;
+  padding-bottom: 5px;
+  width: 400px;
+}
+
+#tableLabel {
+ display: table-caption;
+  text-align: center;
+}
+
+#tableHead{
+  color: #6A6C6E
 }

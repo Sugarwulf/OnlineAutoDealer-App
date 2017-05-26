@@ -1,37 +1,56 @@
-<h3 id="searchStr">Available cars:</h3>
+<!-- <h3 id="searchStr">Available cars:</h3> -->
 
 
-    <p id="SrchView">Enter car make:
+    <strong><p id="SrchView">Enter car make:
     <input
     ng-model="controller.search"
     type="search"
     ng-model-options="{debounce: 1000}"
-    ng-change="controller.fetch()"/></p>
+    ng-change="controller.fetch()"/></p></strong>
 
 <div id="makesList">
     <ul id="listMakes">
-       <li ng-repeat="makes in controller.makes track by $index">
-            {{makes.name}}
-      </li>
+    <strong>
+    <li ng-repeat="make in controller.makes">
+            {{make.name}}
+    </li>
+   </strong>
     </ul>
 </div>
 
     <!-- <p id="or"><strong>or</strong></p> -->
-    <p id="subSearch"><span><input type="submit" class="btn" id="subSearch" onclick="" value="View Details"></span></p>
+    <!-- <p id="subSearch"><span><input type="submit" class="btn" id="subSearch" onclick="" value="View Details"></span></p> -->
 
     <p id="or"><strong>or</strong></p>
 
-    <div ngController ="SearchController as controller">
-    <p id="dropdown">Select a car:
+
+    <strong><p id="dropdown">Browse Inventory:
       <select class="form control" ng-model="controller.search" ng-change="controller.findCar()">
-<!-- <option selected value="S">Select car</option> -->
-     <option value="B">BMW</option>
-     <option value="T">Tesla</option>
-     <option value="M">Mini</option>
-   </select></p>
+     <option value="">---Select make---</option>
+     <option value="1">BMW</option>
+     <option value="2">Tesla</option>
+     <option value="3">Mini</option>
+   </select></p></strong>
 
-    <p id="subSearch"><span><input type="submit" id="subSearch" value="View Details"></span></p>
-  </div>
+<div class="container" id="table">
+   <table border ="1" id="tableChild">
+         <caption id="tableLabel">Available Models</caption>
+         <tr>
+           <th id="tableHead">Picture</th>
+           <th id="tableHead">Price</th>
+           <th id="tableHead">Details</th>
+         </tr>
+         <tr ng-repeat="car in controller.cars | filter:{CarMakeId:controller.search}">
+         <!-- <td>{{car.ShortDescription}}</td>
+         <td>{{car.FullDescription}}</td> -->
+
+         <td><img height="100" width="100" ng-src="{{car.ImageUrl}}"></td>
+         <td>{{car.Price | currency}}</td>
+         <td><button class="btn btn-primary" ng-click="controller.showModal(car.id)">View Details</button></td>
+         </tr>
+       </table>
+
+</div>
 
 
-  <!-- ng-change="controller.fetchMakes()" -->
+  
