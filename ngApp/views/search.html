@@ -1,4 +1,4 @@
-<!-- <h3 id="searchStr">Available cars:</h3> -->
+<!-- Olivia is a tech prodigy</h3> -->
 
 
     <strong><p id="SrchView">Enter car make:
@@ -17,9 +17,6 @@
    </strong>
     </ul>
 </div>
-
-    <!-- <p id="or"><strong>or</strong></p> -->
-    <!-- <p id="subSearch"><span><input type="submit" class="btn" id="subSearch" onclick="" value="View Details"></span></p> -->
 
     <p id="or"><strong>or</strong></p>
 
@@ -40,17 +37,11 @@
            <th id="tableHead">Price</th>
            <th id="tableHead">Details</th>
          </tr>
-         <tr ng-repeat="car in controller.cars | filter:{CarMakeId:controller.search}">
-         <!-- <td>{{car.ShortDescription}}</td>
-         <td>{{car.FullDescription}}</td> -->
-
-         <td><img height="100" width="100" ng-src="{{car.ImageUrl}}"></td>
-         <td>{{car.Price | currency}}</td>
-         <td><button class="btn btn-primary" ng-click="controller.showModal(car.id)">View Details</button></td>
+         <tr ng-repeat="car in controller.cars | filter:{CarMakeId:controller.search}">  <!--added code to filter cars by CarMakeId.  this only returns the cars for the make that the user chooses.  controller.search references the search within the controller. -->
+         <td><img height="100" width="100" ng-src="{{car.ImageUrl}}"></td> <!-- decided to return an image -->
+         <td>{{car.Price | currency}}</td> <!-- decided to return the price (specifically shown in dollars)-->
+         <td><button class="btn btn-primary" ng-click="controller.showModal(car.id)">View Details</button></td> <!-- returned a btn which activate the modal. showModal method has 'id' as a paramater to get to specific instances of cars -->
          </tr>
        </table>
 
 </div>
-
-
-  

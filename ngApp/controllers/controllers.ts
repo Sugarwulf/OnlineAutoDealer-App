@@ -9,10 +9,10 @@ namespace car_dealership.Controllers {
 
       fetch() {
       if(this.search) {
-          // returns everything: this.$http.get('api/makes', this.search)
+          // returns all makes with no filter.  I augmented server side code to filter.
           this.$http.get('/api/makes/search/' + this.search)
           .then((response) => {
-          this.makes = response.data;  //See lines: 15-18 in makes.ts.  I filtered the results on the server side code versus on the client side.
+          this.makes = response.data;  //See lines: 15-18 in the api "makes.ts"  I filtered the results in the server side code versus on the client side.
 
         }).catch((response) => {
           console.log('Could not retrieve cars.');
@@ -23,6 +23,7 @@ namespace car_dealership.Controllers {
 
    findCar() {
     if(this.search) {
+     //returns all cars from the object "cars" in cars.ts.  filtered results on client side in search.html on this one.
       this.$http.get('/api/cars/')
         .then((response) => {
           this.cars = response.data;
@@ -32,15 +33,15 @@ namespace car_dealership.Controllers {
     }
    }
 
-   public showModal (id: number) {
-    this.$http.get('/api/cars/' + id)
+   public showModal (id: number) { // include id parameter to show modal in each specific instance of the car object.
+    this.$http.get('/api/cars/' + id) //find all the cars and their respective id's.
      .then((response) => {
        this.$uibModal.open({
          templateUrl:'ngApp/views/dialog.html',
          controller:'ModalController',
          controllerAs:'modal',
          resolve: {
-           selectedCar: () => response.data
+           selectedCar: () => response.data  //selectedCar represents the specific car chosen identified by the paramater 'id'.
          },
          size: 'sm'
        });
@@ -69,9 +70,6 @@ angular.module('car_dealership').controller('SearchController', SearchController
 
 
 angular.module('car_dealership').controller("ModalController", ModalController);
-
-
-
 
 
   export class BuyController {
